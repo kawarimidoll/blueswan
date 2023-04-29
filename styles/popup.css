@@ -1,0 +1,22 @@
+body {
+  font-size: 1rem;
+  overflow: hidden;
+  margin: 10px;
+  width: 280px;
+  font-family: sans-serif;
+}
+
+h1 {
+  font-size: 1.25em;
+  text-align: center;
+}
+
+.select-group {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+select {
+  width: 90px;
+}

@@ -7,7 +7,7 @@
   "content_scripts": [
     {
       "matches": ["https://staging.bsky.app/*"],
-      "js": ["./scripts/content_scripts.js"],
+      "js": ["./scripts/common.js", "./scripts/content_scripts.js"],
       "css": ["./styles/content_scripts.css"]
     }
   ],

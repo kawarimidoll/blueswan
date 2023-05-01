@@ -11,12 +11,12 @@ h1 {
   text-align: center;
 }
 
-.select-group {
+visibility-select::part(wrapper) {
   display: flex;
   justify-content: space-between;
   margin: 10px;
 }
 
-select {
+visibility-select::part(select) {
   width: 90px;
 }

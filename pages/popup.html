@@ -8,69 +8,14 @@
   <body>
     <h1>Blueswan options</h1>
 
-    <div class="select-group">
-      <div>Replys</div>
-      <select id="select-replys" name="select-replys" aria-label="select-replys">
-        <option value="hide">HIDE</option>
-        <option value="hover">HOVER</option>
-        <option value="show">SHOW</option>
-      </select>
-    </div>
-    <div class="select-group">
-      <div>Reposts</div>
-      <select id="select-reposts" name="select-reposts" aria-label="select-reposts">
-        <option value="hide">HIDE</option>
-        <option value="hover">HOVER</option>
-        <option value="show">SHOW</option>
-      </select>
-    </div>
-    <div class="select-group">
-      <div>Likes</div>
-      <select id="select-likes" name="select-likes" aria-label="select-likes">
-        <option value="hide">HIDE</option>
-        <option value="hover">HOVER</option>
-        <option value="show">SHOW</option>
-      </select>
-    </div>
-    <div class="select-group">
-      <div>Followers</div>
-      <select id="select-followers" name="select-followers" aria-label="select-followers">
-        <option value="hide">HIDE</option>
-        <option value="hover">HOVER</option>
-        <option value="show">SHOW</option>
-      </select>
-    </div>
-    <div class="select-group">
-      <div>Following</div>
-      <select id="select-following" name="select-following" aria-label="select-following">
-        <option value="hide">HIDE</option>
-        <option value="hover">HOVER</option>
-        <option value="show">SHOW</option>
-      </select>
-    </div>
-    <div class="select-group">
-      <div>Posts</div>
-      <select id="select-posts" name="select-posts" aria-label="select-posts">
-        <option value="hide">HIDE</option>
-        <option value="hover">HOVER</option>
-        <option value="show">SHOW</option>
-      </select>
-    </div>
-    <div class="select-group">
-      <div>Notifications</div>
-      <select id="select-notifications" name="select-notifications" aria-label="select-notifications">
-        <option value="hide">HIDE</option>
-        <option value="hover">HOVER</option>
-        <option value="show">SHOW</option>
-      </select>
-    </div>
-    <div class="select-group">
-      <div>💙🦢</div>
-      <select id="select-blueswan" name="select-blueswan" aria-label="select-blueswan">
-        <option value="hide">HIDE</option>
-        <option value="show">SHOW</option>
-      </select>
-    </div>
+    <visibility-select name="replys"></visibility-select>
+    <visibility-select name="reposts"></visibility-select>
+    <visibility-select name="likes"></visibility-select>
+    <visibility-select name="followers"></visibility-select>
+    <visibility-select name="following"></visibility-select>
+    <visibility-select name="posts"></visibility-select>
+    <visibility-select name="notifications"></visibility-select>
+    <visibility-select name="blueswan" title="💙🦢" without="hover"></visibility-select>
 
     <script defer src="../scripts/common.js"></script>
     <script defer src="../scripts/popup.js"></script>

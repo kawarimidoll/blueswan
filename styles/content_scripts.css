@@ -128,6 +128,26 @@ body.posts-hover  div.css-175oi2r.r-iphfwy.r-779j7e.r-tskmnb > div:nth-child(4) 
   }
 }
 
+body.notifications-hide div.css-175oi2r.r-u8s1d.r-c6jqw7.r-1ki14p2.r-1w88a7h > div:nth-child(n+4):nth-child(-n+5) > div > div.css-175oi2r.r-1awozwy.r-h0d30l.r-1777fci.r-zso239.r-1bymd8e.r-1iww7jx > div {
+  color: rgb(0, 0, 0, 0);
+  width: 15px;
+  white-space: nowrap;
+}
+body.notifications-hover div.css-175oi2r.r-u8s1d.r-c6jqw7.r-1ki14p2.r-1w88a7h > div:nth-child(n+4):nth-child(-n+5) {
+  > div > div.css-175oi2r.r-1awozwy.r-h0d30l.r-1777fci.r-zso239.r-1bymd8e.r-1iww7jx > div {
+    color: rgb(0, 0, 0, 0);
+    width: 15px;
+    white-space: nowrap;
+  }
+  &:hover {
+    > div > div.css-175oi2r.r-1awozwy.r-h0d30l.r-1777fci.r-zso239.r-1bymd8e.r-1iww7jx > div {
+      color: rgb(255, 255, 255);
+      width: auto;
+      white-space: initial;
+    }
+  }
+}
+
 body.blueswan-show div.css-175oi2r.r-u8s1d.r-c6jqw7.r-1ki14p2.r-1w88a7h > div.css-175oi2r.r-1i6wzkk.r-lrvibr.r-1loqt21.r-1otgn73.r-zg41ew.r-f727ji.r-cfp7ip::after {
   content: '💙🦢';
 }

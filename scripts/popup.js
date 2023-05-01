@@ -21,27 +21,6 @@ class VisibilitySelect extends HTMLElement {
     select.id = id;
     select.name = id;
     select.ariaLabel = id;
-    wrapper.appendChild(select);
-
-    const without = this.getAttribute("without") || "";
-    visibilities.forEach((v) => {
-      if (without !== v) {
-        const option = document.createElement("option");
-        option.value = v;
-        option.textContent = v.toUpperCase();
-        select.appendChild(option);
-      }
-    });
-  }
-}
-customElements.define("visibility-select", VisibilitySelect);
-
-chrome.storage.local.get(names, (data) => {
-  names.forEach((name) => {
-    const select = document.getElementById(`select-${name}`);
-    [...select.options].forEach((option) =>
-      option.selected = option.value === ensureValue(data[name])
-    );
     select.addEventListener("change", (event) => {
       const { value } = event.target;
       chrome.storage.local.set({ [name]: value }, () => ({}));
@@ -50,9 +29,37 @@ chrome.storage.local.get(names, (data) => {
         // console.log({ tabs });
         const tabId = tabs[0]?.id;
         if (tabId) {
-          chrome.tabs.sendMessage(tabId, { name, value }, () => ({}));
+          const cmd = "setClass";
+          chrome.tabs.sendMessage(tabId, { cmd, name, value }, () => ({}));
         }
       });
     });
-  });
+    wrapper.appendChild(select);
+
+    chrome.storage.local.get(names, (data) => {
+      const without = this.getAttribute("without") || "";
+      visibilities.forEach((v) => {
+        if (without !== v) {
+          const option = document.createElement("option");
+          option.value = v;
+          option.selected = option.value === ensureValue(data[name]);
+          option.textContent = v.toUpperCase();
+          select.appendChild(option);
+        }
+      });
+    });
+  }
+}
+customElements.define("visibility-select", VisibilitySelect);
+
+chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+  const tabId = tabs[0]?.id;
+  if (tabId) {
+    const cmd = "getDark";
+    chrome.tabs.sendMessage(tabId, { cmd }, (v) => {
+      if (v) {
+        document.body.classList.add(`dark`);
+      }
+    });
+  }
 });

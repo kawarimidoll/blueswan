@@ -15,9 +15,16 @@ chrome.storage.local.get(names, (data) => {
 
 chrome.runtime.onMessage.addListener((request, _options, sendResponse) => {
   // console.log({ request, options });
-  const { name, value } = request;
-  if (names.includes(name)) {
-    setClass(name, ensureValue(value));
+  if (request.cmd === "setClass") {
+    const { name, value } = request;
+    if (names.includes(name)) {
+      setClass(name, ensureValue(value));
+    }
+    sendResponse();
+  } else if (request.cmd === "getDark") {
+    const modeText = document.querySelector(
+      "div.css-175oi2r.r-11dz980.r-u8s1d.r-1ej1qmr.r-1ipicw7 > div:nth-child(4) > div > div.css-1rynq56",
+    ).innerText;
+    sendResponse(modeText.includes("Dark"));
   }
-  sendResponse();
 });

@@ -20,3 +20,9 @@ visibility-select::part(wrapper) {
 visibility-select::part(select) {
   width: 90px;
 }
+
+/* dark */
+body.dark, body.dark visibility-select::part(select) {
+  background-color: #222;
+  color: white;
+}

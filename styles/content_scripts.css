@@ -1,153 +1,50 @@
-body.replys-hide div[data-testid="replyBtn"] > div {
+/* replys */
+body.replys-hide div[data-testid="replyBtn"] > div,
+body.replys-hover div[data-testid="replyBtn"]:not(:hover) > div,
+
+/* reposts */
+body.reposts-hide div[data-testid="repostBtn"] > div,
+body.reposts-hide div[data-testid="repostCount"] > span:nth-child(1),
+body.reposts-hover div[data-testid="repostBtn"]:not(:hover) > div,
+body.reposts-hover div[data-testid="repostCount"]:not(:hover) > span:nth-child(1),
+
+/* likes */
+body.likes-hide div[data-testid="likeBtn"] > div,
+body.likes-hide div[data-testid="likeCount"] > span:nth-child(1),
+body.likes-hover div[data-testid="likeBtn"]:not(:hover) > div,
+body.likes-hover div[data-testid="likeCount"]:not(:hover) > span:nth-child(1),
+
+/* followers */
+body.followers-hide div[data-testid="profileHeaderFollowersButton"] > div:nth-child(1),
+body.followers-hover div[data-testid="profileHeaderFollowersButton"]:not(:hover) > div:nth-child(1),
+
+/* follows */
+body.following-hide div[data-testid="profileHeaderFollowsButton"] > div:nth-child(1),
+body.following-hover div[data-testid="profileHeaderFollowsButton"]:not(:hover) > div:nth-child(1),
+
+/* posts */
+body.posts-hide div.css-175oi2r.r-iphfwy.r-779j7e.r-tskmnb > div:nth-child(4) > div:nth-child(3) > div:nth-child(1),
+body.posts-hover div.css-175oi2r.r-iphfwy.r-779j7e.r-tskmnb > div:nth-child(4) > div:nth-child(3):not(:hover) > div:nth-child(1) {
   visibility: hidden;
 }
-body.replys-hover div[data-testid="replyBtn"] {
-  > div {
-    visibility: hidden;
-  }
-  &:hover {
-    > div {
-      visibility: visible;
-    }
-  }
-}
 
-body.reposts-hide {
-  & div[data-testid="repostBtn"] {
-    > div {
-      visibility: hidden;
-    }
-  }
-  & div[data-testid="repostCount"] {
-    > span:nth-child(1) {
-      visibility: hidden;
-    }
-  }
-}
-body.reposts-hover {
-  & div[data-testid="repostBtn"] {
-    > div {
-      visibility: hidden;
-    }
-    &:hover {
-      > div {
-        visibility: visible;
-      }
-    }
-  }
-  & div[data-testid="repostCount"] {
-    > span:nth-child(1) {
-      visibility: hidden;
-    }
-    &:hover {
-      > span:nth-child(1) {
-        visibility: visible;
-      }
-    }
-  }
-}
-/* always show message in modal */
-div[data-testid="repostModal"] > div > div[data-testid="repostBtn"] > div {
-  visibility: visible;
-}
-
-body.likes-hide {
-  & div[data-testid="likeBtn"] {
-    > div {
-      visibility: hidden;
-    }
-  }
-  & div[data-testid="likeCount"] {
-    > span:nth-child(1) {
-      visibility: hidden;
-    }
-  }
-}
-body.likes-hover {
-  & div[data-testid="likeBtn"] {
-    > div {
-      visibility: hidden;
-    }
-    &:hover {
-      > div {
-        visibility: visible;
-      }
-    }
-  }
-  & div[data-testid="likeCount"] {
-    > span:nth-child(1) {
-      visibility: hidden;
-    }
-    &:hover {
-      > span:nth-child(1) {
-        visibility: visible;
-      }
-    }
-  }
-}
-
-body.followers-hide div[data-testid="profileHeaderFollowersButton"] > div:nth-child(1) {
-  visibility: hidden;
-}
-body.followers-hover div[data-testid="profileHeaderFollowersButton"] {
-  > div:nth-child(1) {
-    visibility: hidden;
-  }
-  &:hover {
-    > div:nth-child(1) {
-      visibility: visible;
-    }
-  }
-}
-
-body.following-hide div[data-testid="profileHeaderFollowsButton"] > div:nth-child(1) {
-  visibility: hidden;
-}
-body.following-hover div[data-testid="profileHeaderFollowsButton"] {
-  > div:nth-child(1) {
-    visibility: hidden;
-  }
-  &:hover {
-    > div:nth-child(1) {
-      visibility: visible;
-    }
-  }
-}
-
-body.posts-hide div.css-175oi2r.r-iphfwy.r-779j7e.r-tskmnb > div:nth-child(4) > div:nth-child(3) > div:nth-child(1) {
-  visibility: hidden;
-}
-body.posts-hover  div.css-175oi2r.r-iphfwy.r-779j7e.r-tskmnb > div:nth-child(4) > div:nth-child(3) {
-  > div:nth-child(1) {
-    visibility: hidden;
-  }
-  &:hover {
-    > div:nth-child(1) {
-      visibility: visible;
-    }
-  }
-}
-
-body.notifications-hide div.css-175oi2r.r-u8s1d.r-c6jqw7.r-1ki14p2.r-1w88a7h > div:nth-child(n+4):nth-child(-n+5) > div > div.css-175oi2r.r-1awozwy.r-h0d30l.r-1777fci.r-zso239.r-1bymd8e.r-1iww7jx > div {
+/* notifications */
+body.notifications-hide div.css-175oi2r.r-u8s1d.r-c6jqw7.r-1ki14p2.r-1w88a7h > div:nth-child(n+4):nth-child(-n+5)
+> div > div.css-175oi2r.r-1awozwy.r-h0d30l.r-1777fci.r-zso239.r-1bymd8e.r-1iww7jx > div,
+body.notifications-hover div.css-175oi2r.r-u8s1d.r-c6jqw7.r-1ki14p2.r-1w88a7h > div:nth-child(n+4):nth-child(-n+5):not(:hover)
+> div > div.css-175oi2r.r-1awozwy.r-h0d30l.r-1777fci.r-zso239.r-1bymd8e.r-1iww7jx > div {
   color: rgb(0, 0, 0, 0);
   width: 15px;
   white-space: nowrap;
 }
-body.notifications-hover div.css-175oi2r.r-u8s1d.r-c6jqw7.r-1ki14p2.r-1w88a7h > div:nth-child(n+4):nth-child(-n+5) {
-  > div > div.css-175oi2r.r-1awozwy.r-h0d30l.r-1777fci.r-zso239.r-1bymd8e.r-1iww7jx > div {
-    color: rgb(0, 0, 0, 0);
-    width: 15px;
-    white-space: nowrap;
-  }
-  &:hover {
-    > div > div.css-175oi2r.r-1awozwy.r-h0d30l.r-1777fci.r-zso239.r-1bymd8e.r-1iww7jx > div {
-      color: rgb(255, 255, 255);
-      width: auto;
-      white-space: initial;
-    }
-  }
+
+/* blueswan emoji */
+body.blueswan-show div.css-175oi2r.r-u8s1d.r-c6jqw7.r-1ki14p2.r-1w88a7h
+> div.css-175oi2r.r-1i6wzkk.r-lrvibr.r-1loqt21.r-1otgn73.r-zg41ew.r-f727ji.r-cfp7ip::after {
+  content: '💙🦢';
 }
 
-body.blueswan-show div.css-175oi2r.r-u8s1d.r-c6jqw7.r-1ki14p2.r-1w88a7h > div.css-175oi2r.r-1i6wzkk.r-lrvibr.r-1loqt21.r-1otgn73.r-zg41ew.r-f727ji.r-cfp7ip::after {
-  content: '💙🦢';
+/* always show 'Repost' message in modal */
+div[data-testid="repostModal"] > div > div[data-testid="repostBtn"] > div {
+  visibility: visible !important;
 }

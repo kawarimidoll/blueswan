@@ -38,6 +38,18 @@ body.notifications-hover div.css-175oi2r.r-u8s1d.r-c6jqw7.r-1ki14p2.r-1w88a7h > 
   white-space: nowrap;
 }
 
+/* notifications-list */
+body.notifications-list-hide div.css-175oi2r.r-1pi2tsx > div > div
+> div > div > div > div > div.css-175oi2r.r-1pi2tsx
+> div.css-175oi2r.r-150rngu.r-eqz5dr.r-16y2uox.r-1wbh5a2.r-11yh6sk.r-1rnoaur.r-1sncvnh
+> div > div > div > div.css-175oi2r.r-5kkj8d.r-18u37iz.r-1sp51qo.r-ry3cjt
+> div.css-175oi2r.r-13awgt0 > div:first-child > div:nth-child(3),
+body.notifications-list-hide div.css-1rynq56.r-vw2c0b.r-1ss6j8a {
+  visibility: hidden;
+  height: 2px;
+  width: 1px;
+}
+
 /* blueswan emoji */
 body.blueswan-show div.css-175oi2r.r-u8s1d.r-c6jqw7.r-1ki14p2.r-1w88a7h
 > div.css-175oi2r.r-1i6wzkk.r-lrvibr.r-1loqt21.r-1otgn73.r-zg41ew.r-f727ji.r-cfp7ip::after {

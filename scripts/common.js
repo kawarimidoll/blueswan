@@ -8,6 +8,7 @@ const names = [
   "following",
   "posts",
   "notifications",
+  "notifications-list",
   "blueswan",
 ];
 

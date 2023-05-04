@@ -56,8 +56,7 @@ body.notifications-list-hide div.css-1rynq56.r-vw2c0b.r-1ss6j8a {
 }
 
 /* blueswan emoji */
-body.blueswan-show div.css-175oi2r.r-u8s1d.r-c6jqw7.r-1ki14p2.r-1w88a7h
-> div.css-175oi2r.r-1i6wzkk.r-lrvibr.r-1loqt21.r-1otgn73.r-zg41ew.r-f727ji.r-cfp7ip::after {
+body.blueswan-show div.menuPanel > div:first-child::after {
   content: '💙🦢';
 }
 

@@ -30,9 +30,9 @@ body.posts-hover div.css-175oi2r.r-iphfwy.r-779j7e.r-tskmnb > div:nth-child(4) >
 
 /* notifications */
 body.notifications-hide div.css-175oi2r.r-u8s1d.r-c6jqw7.r-1ki14p2.r-1w88a7h > div:nth-child(n+4):nth-child(-n+5)
-> div > div.css-175oi2r.r-1awozwy.r-h0d30l.r-1777fci.r-zso239.r-1bymd8e.r-1iww7jx > div,
+> div > div,
 body.notifications-hover div.css-175oi2r.r-u8s1d.r-c6jqw7.r-1ki14p2.r-1w88a7h > div:nth-child(n+4):nth-child(-n+5):not(:hover)
-> div > div.css-175oi2r.r-1awozwy.r-h0d30l.r-1777fci.r-zso239.r-1bymd8e.r-1iww7jx > div {
+> div > div {
   color: rgb(0, 0, 0, 0);
   width: 15px;
   white-space: nowrap;

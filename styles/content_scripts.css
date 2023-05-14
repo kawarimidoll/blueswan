@@ -34,10 +34,10 @@ div.css-175oi2r.r-iphfwy.r-779j7e.r-tskmnb > div:nth-child(4) > div:nth-child(3)
 }
 
 /* notifications */
-body.notifications-hide div.css-175oi2r.r-u8s1d.r-c6jqw7.r-1ki14p2.r-1w88a7h > div:nth-child(n+4):nth-child(-n+5)
-> div > div,
-body.notifications-hover div.css-175oi2r.r-u8s1d.r-c6jqw7.r-1ki14p2.r-1w88a7h > div:nth-child(n+4):nth-child(-n+5):not(:hover)
-> div > div {
+body.notifications-hide a[aria-label="Notifications"]
+div.css-1rynq56.r-wzwllv.r-kdyh1x.r-jwli3a.r-1enofrn.r-vw2c0b.r-1liledf.r-s1qlax.r-u8s1d.r-ipm5af,
+body.notifications-hover a[aria-label="Notifications"]:not(:hover)
+div.css-1rynq56.r-wzwllv.r-kdyh1x.r-jwli3a.r-1enofrn.r-vw2c0b.r-1liledf.r-s1qlax.r-u8s1d.r-ipm5af {
   color: rgb(0, 0, 0, 0);
   width: 15px;
   white-space: nowrap;

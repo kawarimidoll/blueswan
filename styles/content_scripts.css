@@ -8,6 +8,10 @@ body.reposts-hide div[data-testid="repostCount"] > span:nth-child(1),
 body.reposts-hover div[data-testid="repostBtn"]:not(:hover) > div,
 body.reposts-hover div[data-testid="repostCount"]:not(:hover) > span:nth-child(1),
 
+/* reposts in bsky.app */
+body.reposts-hide div[aria-label="Opens 2 options"] div[data-testid="repostCount"],
+body.reposts-hover div[aria-label="Opens 2 options"]:not(:hover) div[data-testid="repostCount"],
+
 /* likes */
 body.likes-hide div[data-testid="likeBtn"] > div,
 body.likes-hide div[data-testid="likeCount"] > span:nth-child(1),

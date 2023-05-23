@@ -10,7 +10,7 @@ https://chrome.google.com/webstore/detail/blueswan/cnenmkcimleaeklmeflfnejicbhnd
 
 ## Author
 
-[kawarimidoll](https://staging.bsky.app/profile/did:plc:okalufxun5rpqzdrwf5bpu3d)
+[kawarimidoll](https://bsky.app/profile/did:plc:okalufxun5rpqzdrwf5bpu3d)
 
 ## Inspired by
 

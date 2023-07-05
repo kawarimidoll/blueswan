@@ -22,10 +22,8 @@ chrome.runtime.onMessage.addListener((request, _options, sendResponse) => {
     }
     sendResponse();
   } else if (request.cmd === "getDark") {
-    const modeText = document.querySelector(
-      "div.css-175oi2r.r-11dz980.r-u8s1d.r-1ej1qmr.r-1ipicw7 > div:nth-child(4) > div > div.css-1rynq56",
-    ).innerText;
-    const targetText = location.href.includes("staging") ? 'Dark' : 'Light'
-    sendResponse(modeText.includes(targetText));
+    const wrapper = document.querySelector("#root > div > div");
+    const DARK_CLASS = 'r-kemksi';
+    sendResponse(wrapper.classList.contains(DARK_CLASS));
   }
 });

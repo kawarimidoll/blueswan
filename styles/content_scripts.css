@@ -59,6 +59,11 @@ body.notifications-list-hide div.css-1rynq56.r-vw2c0b.r-1ss6j8a {
   width: 1px;
 }
 
+/* invite-codes */
+body.invite-codes-hide div.css-175oi2r.r-1u20jyi.r-u8s1d.r-1ej1qmr.r-ryqm5k > div.r-1awozwy {
+  visibility: hidden;
+}
+
 /* blueswan emoji */
 body.blueswan-show div.css-175oi2r.r-u8s1d.r-c6jqw7.r-1ki14p2.r-1w88a7h > div[role="link"]:first-child::after {
   content: '💙🦢';

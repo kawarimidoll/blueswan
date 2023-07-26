@@ -65,8 +65,11 @@ body.invite-codes-hide div.css-175oi2r.r-1u20jyi.r-u8s1d.r-1ej1qmr.r-ryqm5k > di
 }
 
 /* blueswan emoji */
-body.blueswan-show div.css-175oi2r.r-u8s1d.r-c6jqw7.r-1ki14p2.r-1w88a7h > div[role="link"]:first-child::after {
+body.blueswan-show div.css-175oi2r.r-u8s1d.r-c6jqw7.r-1ki14p2.r-1w88a7h > a[role="link"]:first-child::after {
   content: '💙🦢';
+}
+body.blueswan-show div.css-175oi2r.r-u8s1d.r-c6jqw7.r-1ki14p2.r-1w88a7h > a[role="link"]:first-child:hover {
+  text-decoration: none !important;
 }
 
 /* always show 'Repost' message in modal */

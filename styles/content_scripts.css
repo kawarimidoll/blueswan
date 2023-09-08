@@ -27,13 +27,13 @@ body.following-hide *[data-testid="profileHeaderFollowsButton"] > div:nth-child(
 body.following-hover *[data-testid="profileHeaderFollowsButton"]:not(:hover) > div:nth-child(1),
 
 /* posts */
-body.posts-hide div.css-175oi2r.r-iphfwy.r-779j7e.r-tskmnb > div:nth-child(4) > div:nth-child(3),
-body.posts-hover div.css-175oi2r.r-iphfwy.r-779j7e.r-tskmnb > div:nth-child(4) > div:nth-child(3):not(:hover) {
+body.posts-hide *[data-testid="profileHeaderFollowsButton"] + div,
+body.posts-hover *[data-testid="profileHeaderFollowsButton"] + div:not(:hover) {
   visibility: hidden;
 }
 
 /* always show 'posts' unit in profile */
-div.css-175oi2r.r-iphfwy.r-779j7e.r-tskmnb > div:nth-child(4) > div:nth-child(3) > span.css-1qaijid {
+*[data-testid="profileHeaderFollowsButton"] + div > span {
   visibility: visible !important;
 }
 
@@ -46,19 +46,15 @@ body.notifications-hover a[aria-label="Notifications"]:not(:hover) > div > div {
 }
 
 /* notifications-list */
-body.notifications-list-hide div.css-175oi2r.r-1pi2tsx > div > div
-> div > div > div > div > div.css-175oi2r.r-1pi2tsx
-> div.css-175oi2r.r-150rngu.r-eqz5dr.r-16y2uox.r-1wbh5a2.r-11yh6sk.r-1rnoaur.r-1sncvnh
-> div > div > div > div.css-175oi2r.r-5kkj8d.r-18u37iz.r-1sp51qo.r-ry3cjt
-> div.css-175oi2r.r-13awgt0 > div:first-child > div:nth-child(3),
-body.notifications-list-hide div.css-1rynq56.r-vw2c0b.r-1ss6j8a {
+body.notifications-list-hide div[data-testid="notificationsScreen"] div[role="link"][data-testid^="feedItem-by-"]
+> div:nth-child(2) > div > div:nth-child(3) {
   visibility: hidden;
   height: 2px;
   width: 1px;
 }
 
 /* invite-codes */
-body.invite-codes-hide div.css-175oi2r.r-1u20jyi.r-u8s1d.r-1ej1qmr.r-ryqm5k > div.r-1awozwy {
+body.invite-codes-hide *[aria-label^="Invite codes"] {
   visibility: hidden;
 }
 

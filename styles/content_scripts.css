@@ -19,12 +19,12 @@ body.likes-hover div[data-testid="likeBtn"]:not(:hover) > div,
 body.likes-hover div[data-testid="likeCount"]:not(:hover) > span:nth-child(1),
 
 /* followers */
-body.followers-hide div[data-testid="profileHeaderFollowersButton"] > div:nth-child(1),
-body.followers-hover div[data-testid="profileHeaderFollowersButton"]:not(:hover) > div:nth-child(1),
+body.followers-hide *[data-testid="profileHeaderFollowersButton"] > div:nth-child(1),
+body.followers-hover *[data-testid="profileHeaderFollowersButton"]:not(:hover) > div:nth-child(1),
 
 /* follows */
-body.following-hide div[data-testid="profileHeaderFollowsButton"] > div:nth-child(1),
-body.following-hover div[data-testid="profileHeaderFollowsButton"]:not(:hover) > div:nth-child(1),
+body.following-hide *[data-testid="profileHeaderFollowsButton"] > div:nth-child(1),
+body.following-hover *[data-testid="profileHeaderFollowsButton"]:not(:hover) > div:nth-child(1),
 
 /* posts */
 body.posts-hide div.css-175oi2r.r-iphfwy.r-779j7e.r-tskmnb > div:nth-child(4) > div:nth-child(3),
@@ -38,10 +38,8 @@ div.css-175oi2r.r-iphfwy.r-779j7e.r-tskmnb > div:nth-child(4) > div:nth-child(3)
 }
 
 /* notifications */
-body.notifications-hide a[aria-label="Notifications"]
-div.css-1rynq56.r-wzwllv.r-kdyh1x.r-jwli3a.r-1enofrn.r-vw2c0b.r-1liledf.r-s1qlax.r-u8s1d.r-ipm5af,
-body.notifications-hover a[aria-label="Notifications"]:not(:hover)
-div.css-1rynq56.r-wzwllv.r-kdyh1x.r-jwli3a.r-1enofrn.r-vw2c0b.r-1liledf.r-s1qlax.r-u8s1d.r-ipm5af {
+body.notifications-hide a[aria-label="Notifications"] > div > div,
+body.notifications-hover a[aria-label="Notifications"]:not(:hover) > div > div {
   color: rgb(0, 0, 0, 0);
   width: 15px;
   white-space: nowrap;

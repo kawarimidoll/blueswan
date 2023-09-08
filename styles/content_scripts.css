@@ -1,22 +1,23 @@
 /* replys */
-body.replys-hide div[data-testid="replyBtn"] > div,
-body.replys-hover div[data-testid="replyBtn"]:not(:hover) > div,
+body.replys-hide *[data-testid="replyBtn"] > div,
+body.replys-hover *[data-testid="replyBtn"]:not(:hover) > div,
 
 /* reposts */
-body.reposts-hide div[data-testid="repostBtn"] > div,
-body.reposts-hide div[data-testid="repostCount"] > span:nth-child(1),
-body.reposts-hover div[data-testid="repostBtn"]:not(:hover) > div,
-body.reposts-hover div[data-testid="repostCount"]:not(:hover) > span:nth-child(1),
+
+body.reposts-hide *[data-testid="repostBtn"] > div,
+body.reposts-hide *[data-testid="repostCount"] > span:nth-child(1),
+body.reposts-hover *[data-testid="repostBtn"]:not(:hover) > div,
+body.reposts-hover *[data-testid="repostCount"]:not(:hover) > span:nth-child(1),
 
 /* reposts in bsky.app */
-body.reposts-hide div[aria-label="Opens 2 options"] div[data-testid="repostCount"],
-body.reposts-hover div[aria-label="Opens 2 options"]:not(:hover) div[data-testid="repostCount"],
+body.reposts-hide *[aria-label="Opens 2 options"] div[data-testid="repostCount"],
+body.reposts-hover *[aria-label="Opens 2 options"]:not(:hover) div[data-testid="repostCount"],
 
 /* likes */
-body.likes-hide div[data-testid="likeBtn"] > div,
-body.likes-hide div[data-testid="likeCount"] > span:nth-child(1),
-body.likes-hover div[data-testid="likeBtn"]:not(:hover) > div,
-body.likes-hover div[data-testid="likeCount"]:not(:hover) > span:nth-child(1),
+body.likes-hide *[data-testid="likeBtn"] > div,
+body.likes-hide *[data-testid="likeCount"] > span:nth-child(1),
+body.likes-hover *[data-testid="likeBtn"]:not(:hover) > div,
+body.likes-hover *[data-testid="likeCount"]:not(:hover) > span:nth-child(1),
 
 /* followers */
 body.followers-hide *[data-testid="profileHeaderFollowersButton"] > div:nth-child(1),

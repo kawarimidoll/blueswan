@@ -49,10 +49,10 @@ body.notifications-hover a[aria-label="Notifications"]:not(:hover) > div > div {
 /* notifications-list */
 /* single user (who liked your post) */
 body.notifications-list-hide div[data-testid="notificationsScreen"] div[role="link"][data-testid^="feedItem-by-"]
-> div:nth-child(2) > div:nth-child(3),
+> div:nth-child(2) > div:nth-child(3)[dir="auto"],
 /* multiple user (who and n others liked your post) */
 body.notifications-list-hide div[data-testid="notificationsScreen"] div[role="link"][data-testid^="feedItem-by-"]
-> div:nth-child(2) > div > div:nth-child(3) {
+> div:nth-child(2) > div > div:nth-child(3)[dir="auto"] {
   visibility: hidden;
   height: 2px;
   width: 1px;

@@ -32,8 +32,8 @@ body.posts-hover *[data-testid="profileHeaderFollowsButton"] + div:not(:hover) {
 }
 
 /* notifications */
-body.notifications-hide a[aria-label="Notifications"] > div > div,
-body.notifications-hover a[aria-label="Notifications"]:not(:hover) > div > div {
+body.notifications-hide a[href="/notifications"] > div > div,
+body.notifications-hover a[href="/notifications"]:not(:hover) > div > div {
   color: rgb(0, 0, 0, 0);
   width: 15px;
   white-space: nowrap;
@@ -52,7 +52,8 @@ body.notifications-list-hide div[data-testid="notificationsScreen"] div[role="li
 }
 
 /* invite-codes */
-body.invite-codes-hide *[aria-label^="Invite codes"] {
+
+body.invite-codes-hide div:has(div>div>div>input[data-testid="searchTextInput"]) > button {
   visibility: hidden;
 }
 

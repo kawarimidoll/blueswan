@@ -55,12 +55,6 @@ body.notifications-list-hide div[data-testid="notificationsScreen"] div[role="li
   width: 1px;
 }
 
-/* invite-codes */
-
-body.invite-codes-hide div:has(div>div>div>input[data-testid="searchTextInput"]) > button {
-  visibility: hidden;
-}
-
 /* blueswan emoji */
 body.blueswan-show div.css-175oi2r.r-c4unlt.r-pgf20v.r-1rnoaur.r-1xcajam.r-1ki14p2.r-1w88a7h > a[role="link"]:first-child {
   &::after {

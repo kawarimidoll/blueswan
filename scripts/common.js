@@ -9,7 +9,6 @@ const names = [
   "posts",
   "notifications",
   "notifications-list",
-  "invite-codes",
   "blueswan",
 ];
 

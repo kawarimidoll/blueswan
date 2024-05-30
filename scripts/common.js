@@ -7,6 +7,7 @@ const names = [
   "followers",
   "following",
   "posts",
+  "messages",
   "notifications",
   "notifications-list",
   "blueswan",

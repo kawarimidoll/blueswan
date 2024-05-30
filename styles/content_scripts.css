@@ -35,6 +35,14 @@ body.posts-hover *[data-testid="profileHeaderFollowsButton"] + div:not(:hover) {
   visibility: visible !important;
 }
 
+/* messages */
+body.messages-hide a[href="/messages"] > div > div,
+body.messages-hover a[href="/messages"]:not(:hover) > div > div {
+  color: rgb(0, 0, 0, 0);
+  width: 15px;
+  white-space: nowrap;
+}
+
 /* notifications */
 body.notifications-hide a[href="/notifications"] > div > div,
 body.notifications-hover a[href="/notifications"]:not(:hover) > div > div {

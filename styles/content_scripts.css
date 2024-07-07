@@ -42,12 +42,24 @@ body.messages-hover a[href="/messages"]:not(:hover) > div > div {
   width: 15px;
   white-space: nowrap;
 }
+/* sp-view */
+body.notifications-hide > #root > div > div > div:nth-child(1) > div > div > div:nth-child(2) > div:nth-child(3) > div > div,
+body.notifications-hover > #root > div > div > div:nth-child(1) > div > div > div:nth-child(2) > div:nth-child(3):not(:hover) > div > div {
+  color: rgb(0, 0, 0, 0);
+  white-space: nowrap;
+}
 
 /* notifications */
 body.notifications-hide a[href="/notifications"] > div > div,
 body.notifications-hover a[href="/notifications"]:not(:hover) > div > div {
   color: rgb(0, 0, 0, 0);
   width: 15px;
+  white-space: nowrap;
+}
+/* sp-view */
+body.notifications-hide > #root > div > div > div:nth-child(1) > div > div > div:nth-child(2) > div:nth-child(4) > div > div,
+body.notifications-hover > #root > div > div > div:nth-child(1) > div > div > div:nth-child(2) > div:nth-child(4):not(:hover) > div > div {
+  color: rgb(0, 0, 0, 0);
   white-space: nowrap;
 }
 

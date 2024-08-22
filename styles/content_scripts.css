@@ -43,8 +43,8 @@ body.messages-hover a[href="/messages"]:not(:hover) > div > div {
   white-space: nowrap;
 }
 /* sp-view */
-body.messages-hide > #root > div > div > div:nth-child(1) > div > div > div:nth-child(2) > div:nth-child(3) > div,
-body.messages-hover > #root > div > div > div:nth-child(1) > div > div > div:nth-child(2) > div:nth-child(3):not(:hover) > div {
+body.messages-hide > #root > div > div > div:nth-child(1) > div > div > div.css-175oi2r.r-2llsf.r-14lw9ot > div:nth-child(2) > div:nth-child(3) > div,
+body.messages-hover > #root > div > div > div:nth-child(1) > div > div > div.css-175oi2r.r-2llsf.r-14lw9ot > div:nth-child(2) > div:nth-child(3):not(:hover) > div {
   width: 15px;
   > div {
     color: rgb(0, 0, 0, 0);
@@ -59,9 +59,9 @@ body.notifications-hover a[href="/notifications"]:not(:hover) > div > div {
   width: 15px;
   white-space: nowrap;
 }
-/* sp-view */
-body.notifications-hide > #root > div > div > div:nth-child(1) > div > div > div:nth-child(2) > div:nth-child(4) > div,
-body.notifications-hover > #root > div > div > div:nth-child(1) > div > div > div:nth-child(2) > div:nth-child(4):not(:hover) > div {
+
+body.notifications-hide > #root > div > div > div:nth-child(1) > div > div > div.css-175oi2r.r-2llsf.r-14lw9ot > div:nth-child(2) > div:nth-child(4) > div,
+body.notifications-hover > #root > div > div > div:nth-child(1) > div > div > div.css-175oi2r.r-2llsf.r-14lw9ot > div:nth-child(2) > div:nth-child(4):not(:hover) > div {
   width: 15px;
   > div {
     color: rgb(0, 0, 0, 0);

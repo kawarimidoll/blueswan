@@ -6,7 +6,7 @@
   "description": "sky without annoying numbers.",
   "content_scripts": [
     {
-      "matches": ["https://bsky.app/*", "https://staging.bsky.app/*"],
+      "matches": ["https://bsky.app/*"],
       "js": ["./scripts/common.js", "./scripts/content_scripts.js"],
       "css": ["./styles/content_scripts.css"]
     }

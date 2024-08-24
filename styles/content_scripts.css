@@ -37,20 +37,7 @@ body.posts-hover *[data-testid="profileHeaderFollowsButton"] + div:not(:hover) {
 
 /* messages */
 body.messages-hide a[href="/messages"] > div > div,
-body.messages-hover a[href="/messages"]:not(:hover) > div > div {
-  color: rgb(0, 0, 0, 0);
-  width: 15px;
-  white-space: nowrap;
-}
-/* sp-view */
-body.messages-hide > #root > div > div > div:nth-child(1) > div > div > div.css-175oi2r.r-2llsf.r-14lw9ot > div:nth-child(2) > div:nth-child(3) > div,
-body.messages-hover > #root > div > div > div:nth-child(1) > div > div > div.css-175oi2r.r-2llsf.r-14lw9ot > div:nth-child(2) > div:nth-child(3):not(:hover) > div {
-  width: 15px;
-  > div {
-    color: rgb(0, 0, 0, 0);
-    white-space: nowrap;
-  }
-}
+body.messages-hover a[href="/messages"]:not(:hover) > div > div,
 
 /* notifications */
 body.notifications-hide a[href="/notifications"] > div > div,
@@ -60,8 +47,13 @@ body.notifications-hover a[href="/notifications"]:not(:hover) > div > div {
   white-space: nowrap;
 }
 
-body.notifications-hide > #root > div > div > div:nth-child(1) > div > div > div.css-175oi2r.r-2llsf.r-14lw9ot > div:nth-child(2) > div:nth-child(4) > div,
-body.notifications-hover > #root > div > div > div:nth-child(1) > div > div > div.css-175oi2r.r-2llsf.r-14lw9ot > div:nth-child(2) > div:nth-child(4):not(:hover) > div {
+/* messages sp-view */
+body.messages-hide div.r-iphfwy.r-19urhcx:nth-child(3) > div,
+body.messages-hover div.r-iphfwy.r-19urhcx:nth-child(3):not(:hover) > div,
+
+/* notifications sp-view */
+body.notifications-hide div.r-iphfwy.r-19urhcx:nth-child(4) > div,
+body.notifications-hover div.r-iphfwy.r-19urhcx:nth-child(4):not(:hover) > div {
   width: 15px;
   > div {
     color: rgb(0, 0, 0, 0);
@@ -82,9 +74,9 @@ body.notifications-list-hide div[data-testid="notificationsScreen"] div[role="li
 }
 
 /* blueswan emoji */
-body.blueswan-show div.css-175oi2r.r-c4unlt.r-pgf20v.r-1rnoaur.r-1xcajam.r-1ki14p2.r-1w88a7h > a[role="link"]:first-child {
+body.blueswan-show a.r-bplmwz.r-f727ji.r-19554kt {
   &::after {
-    content: '💙🦢';
+    content: "💙🦢";
   }
   &:hover {
     text-decoration: none !important;

@@ -13,9 +13,9 @@ body.reposts-hover *[data-testid="quoteCount-expanded"]:not(:hover) > span:nth-c
 
 /* likes */
 /* likeCount & likeCount-expanded */
-body.likes-hide *[data-testid="likeBtn"] > div,
+body.likes-hide *[data-testid="likeBtn"] > div:nth-child(2),
 body.likes-hide *[data-testid^="likeCount"] > span:nth-child(1),
-body.likes-hover *[data-testid="likeBtn"]:not(:hover) > div,
+body.likes-hover *[data-testid="likeBtn"]:not(:hover) > div:nth-child(2),
 body.likes-hover *[data-testid^="likeCount"]:not(:hover) > span:nth-child(1),
 
 /* followers */

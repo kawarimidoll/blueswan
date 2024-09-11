@@ -75,6 +75,17 @@ body.notifications-list-hide div[data-testid="notificationsScreen"] div[role="li
   width: 1px;
 }
 
+/* suggested-for-you */
+body.suggested-for-you-hide
+  div.css-175oi2r:has(
+    > div.css-175oi2r
+      > div.css-175oi2r:nth-child(2)
+      > div.css-175oi2r:nth-child(2)
+      > a.css-146c3p1.r-1loqt21[href="/search"][aria-label="Browse more suggestions"]
+  ) {
+  display: none;
+}
+
 /* blueswan emoji */
 body.blueswan-show a.r-bplmwz.r-f727ji.r-19554kt {
   &::after {

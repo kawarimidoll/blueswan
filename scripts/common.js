@@ -10,6 +10,7 @@ const names = [
   "messages",
   "notifications",
   "notifications-list",
+  "suggested-for-you",
   "blueswan",
 ];
 

@@ -44,7 +44,7 @@ body.messages-hover a[href="/messages"]:not(:hover) > div > div,
 /* notifications */
 body.notifications-hide a[href="/notifications"] > div > div,
 body.notifications-hover a[href="/notifications"]:not(:hover) > div > div {
-  color: rgb(0, 0, 0, 0);
+  color: rgb(0, 0, 0, 0) !important;
   width: 15px;
   white-space: nowrap;
 }
@@ -58,7 +58,7 @@ body.notifications-hide div.r-iphfwy.r-19urhcx:nth-child(4) > div,
 body.notifications-hover div.r-iphfwy.r-19urhcx:nth-child(4):not(:hover) > div {
   width: 15px;
   > div {
-    color: rgb(0, 0, 0, 0);
+    color: rgb(0, 0, 0, 0) !important;
     white-space: nowrap;
   }
 }

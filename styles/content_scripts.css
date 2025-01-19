@@ -83,9 +83,9 @@ body.suggested-for-you-hide
 }
 
 /* blueswan emoji */
-body.blueswan-show a.r-bplmwz.r-f727ji.r-19554kt {
+body.blueswan-show nav > div:nth-child(1):has(button[role="button"]) {
   &::after {
-    content: "💙🦢";
+    content: "　💙🦢";
   }
   &:hover {
     text-decoration: none !important;

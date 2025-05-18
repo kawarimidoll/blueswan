@@ -71,10 +71,10 @@ body.notifications-list-hide [data-testid="notificationsScreen"] [role="link"][d
 
 /* suggested-for-you */
 body.suggested-for-you-hide
-  .css-175oi2r:has(
-    > .css-175oi2r
-      > .css-175oi2r:nth-child(2)
-      > .css-175oi2r:nth-child(2)
+  .css-g5y9jx:has(
+    > .css-g5y9jx
+      > .css-g5y9jx:nth-child(2)
+      > .css-g5y9jx:nth-child(2)
       > a.css-146c3p1.r-1loqt21[href="/search"]
   ) {
   display: none;

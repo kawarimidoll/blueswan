@@ -7,20 +7,20 @@
   "content_scripts": [
     {
       "matches": ["https://bsky.app/*"],
-      "js": ["./scripts/common.js", "./scripts/content_scripts.js"],
-      "css": ["./styles/content_scripts.css"]
+      "js": ["scripts/common.js", "scripts/content_scripts.js"],
+      "css": ["styles/content_scripts.css"]
     }
   ],
   "icons": {
-    "16": "./images/blueswan-16.png",
-    "128": "./images/blueswan-128.png"
+    "16": "images/blueswan-16.png",
+    "128": "images/blueswan-128.png"
   },
   "action": {
     "default_icon": {
-      "16": "./images/blueswan-16.png",
-      "128": "./images/blueswan-128.png"
+      "16": "images/blueswan-16.png",
+      "128": "images/blueswan-128.png"
     },
-    "default_popup": "./pages/popup.html"
+    "default_popup": "pages/popup.html"
   },
   "permissions": ["storage"]
 }

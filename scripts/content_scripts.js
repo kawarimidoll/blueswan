@@ -24,6 +24,6 @@ chrome.runtime.onMessage.addListener((request, _options, sendResponse) => {
   } else if (request.cmd === "getDark") {
     const wrapper = document.querySelector("#root > div > div");
     const DARK_CLASS = 'r-kemksi';
-    sendResponse(wrapper.classList.contains(DARK_CLASS));
+    sendResponse(wrapper?.classList?.contains(DARK_CLASS));
   }
 });

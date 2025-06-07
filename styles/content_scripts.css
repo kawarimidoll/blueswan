@@ -4,7 +4,7 @@ body.replys-hover [data-testid="replyBtn"]:not(:hover) > div,
 
 /* reposts */
 body.reposts-hide [data-testid="repostCount"],
-body.reposts-hover div:has([data-testid="repostCount"]):not(:hover) > [data-testid="repostCount"],
+body.reposts-hover [data-testid="repostBtn"]:not(:hover) > div:nth-child(2),
 body.reposts-hide [data-testid="repostCount-expanded"] > span:first-child,
 body.reposts-hover [data-testid="repostCount-expanded"]:not(:hover) > span:first-child,
 body.reposts-hide [data-testid="quoteCount-expanded"] > span:first-child,

@@ -1,29 +1,36 @@
 /* replys */
 body.replys-hide [data-testid="replyBtn"] > div,
 body.replys-hover [data-testid="replyBtn"]:not(:hover) > div,
-
 /* reposts */
 body.reposts-hide [data-testid="repostCount"],
 body.reposts-hover [data-testid="repostBtn"]:not(:hover) > div:nth-child(2),
 body.reposts-hide [data-testid="repostCount-expanded"] > span:first-child,
-body.reposts-hover [data-testid="repostCount-expanded"]:not(:hover) > span:first-child,
+body.reposts-hover
+  [data-testid="repostCount-expanded"]:not(:hover)
+  > span:first-child,
 body.reposts-hide [data-testid="quoteCount-expanded"] > span:first-child,
-body.reposts-hover [data-testid="quoteCount-expanded"]:not(:hover) > span:first-child,
-
+body.reposts-hover
+  [data-testid="quoteCount-expanded"]:not(:hover)
+  > span:first-child,
 /* likes */
 body.likes-hide [data-testid="likeBtn"] > div:nth-child(2),
 body.likes-hide [data-testid^="likeCount"] > span:first-child,
 body.likes-hover [data-testid="likeBtn"]:not(:hover) > div:nth-child(2),
 body.likes-hover [data-testid^="likeCount"]:not(:hover) > span:first-child,
-
 /* followers */
-body.followers-hide [data-testid="profileHeaderFollowersButton"] > span:first-child,
-body.followers-hover [data-testid="profileHeaderFollowersButton"]:not(:hover) > span:first-child,
-
+body.followers-hide
+  [data-testid="profileHeaderFollowersButton"]
+  > span:first-child,
+body.followers-hover
+  [data-testid="profileHeaderFollowersButton"]:not(:hover)
+  > span:first-child,
 /* follows */
-body.following-hide [data-testid="profileHeaderFollowsButton"] > span:first-child,
-body.following-hover [data-testid="profileHeaderFollowsButton"]:not(:hover) > span:first-child,
-
+body.following-hide
+  [data-testid="profileHeaderFollowsButton"]
+  > span:first-child,
+body.following-hover
+  [data-testid="profileHeaderFollowsButton"]:not(:hover)
+  > span:first-child,
 /* posts */
 body.posts-hide [data-testid="profileHeaderFollowsButton"] + div,
 body.posts-hover [data-testid="profileHeaderFollowsButton"] + div:not(:hover) {
@@ -38,10 +45,13 @@ body.posts-hover [data-testid="profileHeaderFollowsButton"] + div:not(:hover) {
 /* messages */
 body.messages-hide a[href="/messages"] > div > div > div,
 body.messages-hover a[href="/messages"]:not(:hover) > div > div > div,
-
 /* notifications */
 body.notifications-hide a[href="/notifications"] > div > div > div,
-body.notifications-hover a[href="/notifications"]:not(:hover) > div > div > div {
+body.notifications-hover
+  a[href="/notifications"]:not(:hover)
+  > div
+  > div
+  > div {
   color: rgba(0, 0, 0, 0) !important;
   width: 15px;
   white-space: nowrap;
@@ -50,7 +60,6 @@ body.notifications-hover a[href="/notifications"]:not(:hover) > div > div > div 
 /* messages sp-view */
 body.messages-hide .r-19urhcx:nth-child(3) > div > div,
 body.messages-hover .r-19urhcx:nth-child(3):not(:hover) > div > div,
-
 /* notifications sp-view */
 body.notifications-hide .r-19urhcx:nth-child(4) > div > div,
 body.notifications-hover .r-19urhcx:nth-child(4):not(:hover) > div > div {
@@ -59,11 +68,20 @@ body.notifications-hover .r-19urhcx:nth-child(4):not(:hover) > div > div {
 
 /* notifications-list */
 /* single user (who liked your post) */
-body.notifications-list-hide [data-testid="notificationsScreen"] [role="link"][data-testid^="feedItem-by-"]
-> div > div:nth-child(3) > div:nth-child(3)[dir="auto"],
+body.notifications-list-hide
+  [data-testid="notificationsScreen"]
+  [role="link"][data-testid^="feedItem-by-"]
+  > div
+  > div:nth-child(3)
+  > div:nth-child(3)[dir="auto"],
 /* multiple user (who and n others liked your post) */
-body.notifications-list-hide [data-testid="notificationsScreen"] [role="link"][data-testid^="feedItem-by-"]
-> div > div:nth-child(3) > div > div:nth-child(3)[dir="auto"] {
+body.notifications-list-hide
+  [data-testid="notificationsScreen"]
+  [role="link"][data-testid^="feedItem-by-"]
+  > div
+  > div:nth-child(3)
+  > div
+  > div:nth-child(3)[dir="auto"] {
   visibility: hidden;
   height: 2px;
   width: 1px;

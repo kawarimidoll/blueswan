@@ -22,7 +22,8 @@ visibility-select::part(select) {
 }
 
 /* dark */
-body.dark, body.dark visibility-select::part(select) {
+body.dark,
+body.dark visibility-select::part(select) {
   background-color: #222;
   color: white;
 }

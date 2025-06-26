@@ -1,22 +1,25 @@
+const template = document.createElement("template");
+template.innerHTML = `
+  <div part="wrapper">
+    <div id="title"></div>
+    <select part="select" id="select"></select>
+  </div>
+`;
+
 class VisibilitySelect extends HTMLElement {
   constructor() {
     super();
 
     const shadow = this.attachShadow({ mode: "open" });
+    shadow.appendChild(template.content.cloneNode(true));
 
     const name = this.getAttribute("name");
 
-    const wrapper = document.createElement("div");
-    wrapper.setAttribute("part", "wrapper");
-    shadow.appendChild(wrapper);
-
-    const title = document.createElement("div");
+    const title = shadow.querySelector("#title");
     const titleText = this.getAttribute("title") || name;
     title.textContent = titleText.replace(/^./, (c) => c.toUpperCase());
-    wrapper.appendChild(title);
 
-    const select = document.createElement("select");
-    select.setAttribute("part", "select");
+    const select = shadow.querySelector("#select");
     const id = `select-${name}`;
     select.id = id;
     select.name = id;
@@ -34,7 +37,6 @@ class VisibilitySelect extends HTMLElement {
         }
       });
     });
-    wrapper.appendChild(select);
 
     chrome.storage.local.get(names, (data) => {
       const without = this.getAttribute("without") || "";

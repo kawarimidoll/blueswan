@@ -1,7 +1,7 @@
 function setClass(name, value) {
   // console.log(`set ${name}-${value}`);
-  visibilities.forEach((visibilitiy) => {
-    document.body.classList.remove(`${name}-${visibilitiy}`);
+  visibilities.forEach((visibility) => {
+    document.body.classList.remove(`${name}-${visibility}`);
   });
   document.body.classList.add(`${name}-${value}`);
 }

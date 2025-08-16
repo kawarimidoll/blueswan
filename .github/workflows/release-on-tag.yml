@@ -40,7 +40,7 @@ jobs:
             fi
           done
 
-          echo "**Full Changelog**: https://github.com/${GITHUB_REPOSITORY}/compare/$PREV_TAG...$TAG_NAME" >> changelog.md
+          echo "**Full Changelog**: https://github.com/kawarimidoll/blueswan/compare/$PREV_TAG...$TAG_NAME" >> changelog.md
 
           echo "changelog<<EOF" >> $GITHUB_OUTPUT
           cat changelog.md >> $GITHUB_OUTPUT

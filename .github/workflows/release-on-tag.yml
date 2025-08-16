@@ -5,7 +5,7 @@ name: Release on Tag
 on:
   push:
     tags:
-      - '*' # 全てのタグ
+      - "*" # 全てのタグ
 
 jobs:
   create_release:
@@ -30,8 +30,6 @@ jobs:
           RANGE="$PREV_TAG..$TAG_NAME"
 
           echo "" > changelog.md
-
-
 
           for TYPE in feat fix docs style refactor test chore; do
             LOG=$(git log $RANGE --pretty=format:"[%s](%h)" --grep="^$TYPE:" | grep -v '^chore(version):' || true)

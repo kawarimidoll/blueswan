@@ -1,6 +1,6 @@
-/* replys */
-body.replys-hide [data-testid="replyBtn"] > div,
-body.replys-hover [data-testid="replyBtn"]:not(:hover) > div,
+/* replies */
+body.replies-hide [data-testid="replyBtn"] > div,
+body.replies-hover [data-testid="replyBtn"]:not(:hover) > div,
 /* reposts */
 body.reposts-hide [data-testid="repostCount"],
 body.reposts-hover [data-testid="repostBtn"]:not(:hover) > div:nth-child(2),

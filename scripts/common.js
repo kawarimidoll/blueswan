@@ -1,7 +1,7 @@
 const visibilities = ["show", "hover", "hide"];
 
 const names = [
-  "replys",
+  "replies",
   "reposts",
   "likes",
   "followers",

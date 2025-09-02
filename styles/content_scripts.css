@@ -71,14 +71,12 @@ body.notifications-hover .r-19urhcx:nth-child(4):not(:hover) > div > div {
 body.notifications-list-hide
   [data-testid="notificationsScreen"]
   [role="link"][data-testid^="feedItem-by-"]
-  > div
   > div:nth-child(3)
   > div:nth-child(3)[dir="auto"],
 /* multiple user (who and n others liked your post) */
 body.notifications-list-hide
   [data-testid="notificationsScreen"]
   [role="link"][data-testid^="feedItem-by-"]
-  > div
   > div:nth-child(3)
   > div
   > div:nth-child(3)[dir="auto"] {

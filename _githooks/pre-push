@@ -17,5 +17,6 @@ latest_tag=$(git tag --sort=-creatordate | head -n 1)
 if [ "$version" != "$latest_tag" ]; then
   echo "ERROR: manifest.json version ($version) does not match latest tag ($latest_tag)"
   echo "Run: git tag $version"
+  echo "To push tags, run: git push --tags"
   exit 1
 fi

@@ -13,37 +13,14 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-
-      - name: Get previous tag
-        id: previoustag
-        run: |
-          set -e
-          PREV_TAG=$(git tag --sort=-creatordate | grep -v "${GITHUB_REF_NAME}" | head -n 1)
-          echo "prev_tag=$PREV_TAG" >> $GITHUB_OUTPUT
+        with:
+          fetch-depth: 0
 
       - name: Generate changelog
         id: changelog
         run: |
-          set -e
-          TAG_NAME="${GITHUB_REF_NAME}"
-          PREV_TAG="${{ steps.previoustag.outputs.prev_tag }}"
-          RANGE="$PREV_TAG..$TAG_NAME"
-
-          echo "" > changelog.md
-
-          for TYPE in feat fix docs style refactor test chore; do
-            LOG=$(git log $RANGE --pretty=format:"[%s](%h)" --grep="^$TYPE:" | grep -v '^chore(version):' || true)
-            if [ -n "$LOG" ]; then
-              echo -e "## $TYPE\n" >> changelog.md
-              echo "- $LOG" >> changelog.md
-              echo "" >> changelog.md
-            fi
-          done
-
-          echo "**Full Changelog**: https://github.com/kawarimidoll/blueswan/compare/$PREV_TAG...$TAG_NAME" >> changelog.md
-
           echo "changelog<<EOF" >> $GITHUB_OUTPUT
-          cat changelog.md >> $GITHUB_OUTPUT
+          .github/scripts/generate-changelog.sh "$GITHUB_REF_NAME" >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
 
       - name: Create draft release

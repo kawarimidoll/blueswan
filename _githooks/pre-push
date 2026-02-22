@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# copy this into .git/hooks
+# Remind to create a tag when manifest.json version has changed
+
+# Only run when pushing to main
+while read -r _local_ref _local_sha remote_ref _remote_sha; do
+  if [ "$remote_ref" != "refs/heads/main" ]; then
+    exit 0
+  fi
+done
+
+version=$(jq -r '.version' manifest.json)
+latest_tag=$(git tag --sort=-creatordate | head -n 1)
+
+if [ "$version" != "$latest_tag" ]; then
+  echo "ERROR: manifest.json version ($version) does not match latest tag ($latest_tag)"
+  echo "Run: git tag $version"
+  exit 1
+fi

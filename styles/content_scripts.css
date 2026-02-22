@@ -87,10 +87,11 @@ body.notifications-list-hide
 
 /* suggested-for-you */
 body.suggested-for-you-hide
+  div[data-testid="postsFeed-flatlist"]
   .css-g5y9jx:has(
-    > .css-g5y9jx
-      > .css-g5y9jx:nth-child(1)
-      > a.css-146c3p1.r-1loqt21[href="/search"]
+    > .css-g5y9jx.r-12vffkv
+      > .css-g5y9jx.r-12vffkv
+      > button.css-g5y9jx.r-1loqt21.r-1otgn73
   ) {
   display: none;
 }

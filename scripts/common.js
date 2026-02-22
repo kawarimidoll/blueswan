@@ -4,6 +4,7 @@ const names = [
   "replies",
   "reposts",
   "likes",
+  "bookmarks",
   "followers",
   "following",
   "posts",

@@ -17,6 +17,9 @@ body.likes-hide [data-testid="likeBtn"] > div:nth-child(2),
 body.likes-hide [data-testid^="likeCount"] > span:first-child,
 body.likes-hover [data-testid="likeBtn"]:not(:hover) > div:nth-child(2),
 body.likes-hover [data-testid^="likeCount"]:not(:hover) > span:first-child,
+/* bookmarks */
+body.bookmarks-hide [data-testid="bookmarkCount-expanded"] > span:first-child,
+body.bookmarks-hover [data-testid="bookmarkCount-expanded"]:not(:hover) > span:first-child,
 /* followers */
 body.followers-hide
   [data-testid="profileHeaderFollowersButton"]

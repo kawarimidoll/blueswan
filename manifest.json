@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Blueswan",
   "author": "kawarimidoll",
-  "version": "25.09.03",
+  "version": "26.02.22",
   "description": "sky without annoying numbers.",
   "content_scripts": [
     {

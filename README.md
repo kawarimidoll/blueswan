@@ -17,6 +17,16 @@ https://chrome.google.com/webstore/detail/blueswan/cnenmkcimleaeklmeflfnejicbhnd
 - https://github.com/yusukesaitoh/calm-twitter (Chrome extension for Twitter)
 - https://github.com/hota1024/ucho-ten (Bluesky web client)
 
+## Release
+
+Releases use [CalVer](https://calver.org/) (`YY.MM.DD`). To create a new release:
+
+```bash
+gh workflow run publish.yml
+```
+
+Or use the "Run workflow" button on the [Actions tab](https://github.com/kawarimidoll/blueswan/actions/workflows/publish.yml).
+
 ## License
 
 MIT

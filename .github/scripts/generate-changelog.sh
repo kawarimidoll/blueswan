@@ -1,15 +1,16 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Usage: generate-changelog.sh <tag-name>
-# Generate changelog from diff with previous tag and output to stdout
+# Usage: generate-changelog.sh [base-ref] [new-tag]
+# Generate changelog from commits between base-ref and HEAD
+# - base-ref: starting point for log range (default: latest tag)
+# - new-tag: tag name for Full Changelog link (default: HEAD)
 
-TAG_NAME="${1:?Usage: generate-changelog.sh <tag-name>}"
-
-PREV_TAG=$(git tag --sort=-creatordate | grep -v "$TAG_NAME" | head -n 1)
+BASE_REF="${1:-$(git tag --sort=-creatordate | head -n 1)}"
+NEW_TAG="${2:-HEAD}"
 
 for TYPE in feat fix docs style refactor test chore; do
-  LOG=$(git log "$PREV_TAG..$TAG_NAME" --pretty=format:"[%s](%h)" --grep="^$TYPE:" | grep -v '^chore(version):' || true)
+  LOG=$(git log "$BASE_REF..HEAD" --pretty=format:"[%s](%h)" --grep="^$TYPE:" | grep -vF '[chore(version):' || true)
   if [ -n "$LOG" ]; then
     echo "## $TYPE"
     echo ""
@@ -19,4 +20,4 @@ for TYPE in feat fix docs style refactor test chore; do
 done
 
 REPO_URL=$(git remote get-url origin | sed 's/\.git$//' | sed 's|git@github.com:|https://github.com/|')
-echo "**Full Changelog**: $REPO_URL/compare/$PREV_TAG...$TAG_NAME"
+echo "**Full Changelog**: $REPO_URL/compare/$BASE_REF...$NEW_TAG"

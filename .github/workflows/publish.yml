@@ -47,20 +47,12 @@ jobs:
           git push
           echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
 
-      - name: Generate changelog
-        id: changelog
+      - name: Create release
         run: |
           PREV_TAG=$(git tag --sort=-creatordate | head -n 1)
           TAG="${{ steps.calver.outputs.tag }}"
-          echo "changelog<<EOF" >> "$GITHUB_OUTPUT"
-          .github/scripts/generate-changelog.sh "$PREV_TAG" "$TAG" >> "$GITHUB_OUTPUT"
-          echo "EOF" >> "$GITHUB_OUTPUT"
-
-      - name: Create release
-        run: |
-          TAG="${{ steps.calver.outputs.tag }}"
-          gh release create "$TAG" --target "$SHA" --title "$TAG" --notes "$CHANGELOG"
+          .github/scripts/generate-changelog.sh "$PREV_TAG" "$TAG" > changelog.md
+          gh release create "$TAG" --target "$SHA" --title "$TAG" --notes-file changelog.md
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SHA: ${{ steps.version-commit.outputs.sha }}
-          CHANGELOG: ${{ steps.changelog.outputs.changelog }}

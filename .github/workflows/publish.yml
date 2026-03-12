@@ -58,3 +58,20 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SHA: ${{ steps.version-commit.outputs.sha }}
           TAG: ${{ steps.calver.outputs.tag }}
+
+      - name: Package extension
+        run: zip -r blueswan.zip . -x '.git/*' '.github/*' '*.md' '.gitignore' '*.zip'
+
+      - name: Publish to Chrome Web Store
+        run: .github/scripts/publish-chrome.sh blueswan.zip
+        env:
+          CHROME_EXTENSION_ID: ${{ secrets.CHROME_EXTENSION_ID }}
+          CHROME_CLIENT_ID: ${{ secrets.CHROME_CLIENT_ID }}
+          CHROME_CLIENT_SECRET: ${{ secrets.CHROME_CLIENT_SECRET }}
+          CHROME_REFRESH_TOKEN: ${{ secrets.CHROME_REFRESH_TOKEN }}
+
+      - name: Submit to AMO
+        run: .github/scripts/publish-firefox.sh blueswan.zip
+        env:
+          AMO_JWT_ISSUER: ${{ secrets.AMO_JWT_ISSUER }}
+          AMO_JWT_SECRET: ${{ secrets.AMO_JWT_SECRET }}

@@ -25,7 +25,7 @@ jobs:
       - name: Generate CalVer tag
         id: calver
         run: |
-          BASE=$(date +'%y.%m.%d')
+          BASE=$(date +'%-y.%-m.%-d')
           TAG="$BASE"
           SUFFIX=1
           while git tag | grep -qx "$TAG"; do

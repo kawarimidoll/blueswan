@@ -5,11 +5,11 @@ set -euo pipefail
 # Upload and publish a Chrome extension to the Chrome Web Store.
 #
 # Required environment variables:
-#   CHROME_EXTENSION_ID  - Extension ID on Chrome Web Store
 #   CHROME_CLIENT_ID     - Google OAuth2 client ID
 #   CHROME_CLIENT_SECRET - Google OAuth2 client secret
 #   CHROME_REFRESH_TOKEN - Google OAuth2 refresh token
 
+EXTENSION_ID="cnenmkcimleaeklmeflfnejicbhndlko"
 ZIP_PATH="${1:?Usage: publish-chrome.sh <zip-path>}"
 
 if [[ ! -f "$ZIP_PATH" ]]; then
@@ -32,7 +32,7 @@ fi
 
 echo "Uploading $ZIP_PATH..."
 UPLOAD_RESULT=$(curl -sf -X PUT \
-  "https://www.googleapis.com/upload/chromewebstore/v1.1/items/$CHROME_EXTENSION_ID" \
+  "https://www.googleapis.com/upload/chromewebstore/v1.1/items/$EXTENSION_ID" \
   -H "Authorization: Bearer $ACCESS_TOKEN" \
   -H "x-goog-api-version: 2" \
   -T "$ZIP_PATH")
@@ -47,7 +47,7 @@ echo "Upload succeeded."
 
 echo "Publishing..."
 PUBLISH_RESULT=$(curl -sf -X POST \
-  "https://www.googleapis.com/chromewebstore/v1.1/items/$CHROME_EXTENSION_ID/publish" \
+  "https://www.googleapis.com/chromewebstore/v1.1/items/$EXTENSION_ID/publish" \
   -H "Authorization: Bearer $ACCESS_TOKEN" \
   -H "x-goog-api-version: 2")
 

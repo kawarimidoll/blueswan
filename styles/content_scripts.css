@@ -102,7 +102,9 @@ body.suggested-for-you-hide
 /* blueswan emoji */
 body.blueswan-show nav > div:first-child:has(button[role="button"]) {
   &::after {
-    content: "　💙🦢";
+    content: "💙🦢";
+    white-space: nowrap;
+    padding-left: 0.5em;
   }
   &:hover {
     text-decoration: none !important;

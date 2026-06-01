@@ -2,13 +2,20 @@
   "manifest_version": 3,
   "name": "Blueswan",
   "author": "kawarimidoll",
-  "version": "26.2.22",
+  "version": "26.6.1",
   "description": "sky without annoying numbers.",
   "content_scripts": [
     {
-      "matches": ["https://bsky.app/*"],
-      "js": ["scripts/common.js", "scripts/content_scripts.js"],
-      "css": ["styles/content_scripts.css"]
+      "matches": [
+        "https://bsky.app/*"
+      ],
+      "js": [
+        "scripts/common.js",
+        "scripts/content_scripts.js"
+      ],
+      "css": [
+        "styles/content_scripts.css"
+      ]
     }
   ],
   "icons": {
@@ -22,13 +29,17 @@
     },
     "default_popup": "pages/popup.html"
   },
-  "permissions": ["storage"],
+  "permissions": [
+    "storage"
+  ],
   "browser_specific_settings": {
     "gecko": {
       "id": "blueswan@kawarimidoll",
       "strict_min_version": "140.0",
       "data_collection_permissions": {
-        "required": ["none"]
+        "required": [
+          "none"
+        ]
       }
     },
     "gecko_android": {
